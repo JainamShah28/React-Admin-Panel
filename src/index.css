@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+    .nav-link {
+        @apply flex justify-start items-center  w-full hover:bg-[#ece8ff] cursor-pointer py-1 pl-6
+    }
+
+    .title {
+        @apply text-[#999] font-bold text-xs pl-4 mb-1
+    }
+
+    .card-shadow {
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47)
+    }
+
+    .input-box {
+        @apply flex flex-col
+    }
+
+    .input {
+        @apply w-[60%] focus:outline-none border-b-2 border-b-slate-700 py-1 text-sm
+    }
+
+    .input-label {
+        @apply font-semibold mb-1
+    }
 }
